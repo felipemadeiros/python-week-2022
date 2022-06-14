@@ -16,8 +16,7 @@ class Beer(SQLModel, table=True):
     date: datetime = Field(default_factory=datetime.now)
 
     @validator("flavor", "image", "cost")
-    def validate_ratings(cls, v, field):
-        print(field)
+    def validate_ratings(cls, v, field):brew
         if v < 1 or v > 10:
             raise RuntimeError(f"{field.name} must be between 1 and 10")
         return v

@@ -1,4 +1,4 @@
-from .config import settings
+from beerlog.config import settings
 
 
 def main():
